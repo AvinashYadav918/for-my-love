@@ -144,49 +144,49 @@ const LOVE_CONFIG = {
       title: "The Most Blessed Moment 👶❤️",
       caption: "Meri pyaari Udbilao aur hamara nanha angel. Aap dono meri poori duniya hain!",
       date: "Pure Blessing",
-      src: "assets/images/best_moment.jpg",
+      src: "https://plain-apac-prod-public.komododecks.com/202611/09/E5cf3ZXmlG8d9xR6xZce/image.jpg",
       tag: "Best Moments"
     },
     {
       title: "Pure Love & Soulmates 💍❤️",
       caption: "Aapke is ehsaas me poori duniya ka sukoon hai. Meri sabse pyaari Udbilao, main hamesha aapse beinteha pyaar karta rahunga!",
       date: "18 April 2025",
-      src: "assets/images/romance_moment.jpg",
+      src: "https://plain-apac-prod-public.komododecks.com/202611/09/KXT45TXoruo9430axTOU/image.jpg",
       tag: "Romance"
     },
     {
       title: "Cutest Goofy Pout 🌸😜",
       caption: "Aapke is cute pout aur masti ke aage poori duniya fail hai! Meri sabse pyaari Udbilao!",
       date: "Pure Fun Moments",
-      src: "assets/images/fun_moment.jpg",
+      src: "https://plain-apac-prod-public.komododecks.com/202611/09/1Of8ArqUUMQQI2YSnGc8/image.jpg",
       tag: "Fun"
     },
     {
       title: "The Jaimala Ceremony 🌸💍",
       caption: "Hamari zindagi ka sabse bada aur pyara milestone! Do dil ek ho gaye aur aap meri hamesha ke liye wifey ban gayi!",
       date: "18 April 2025",
-      src: "assets/images/milestone_moment.jpg",
+      src: "https://plain-apac-prod-public.komododecks.com/202611/09/NPnMqMzh2PRetZzIRSFa/image.jpg",
       tag: "Milestones"
     },
     {
       title: "Highway & Bike Rides 🏍️💨",
       caption: "Aapke saath har ek road trip sabse khubsoorat safar ban jati hai! Meri pyaari Udbilao!",
       date: "Road Trip Vibe",
-      src: "assets/images/travel_moment1.jpg",
+      src: "https://plain-apac-prod-public.komododecks.com/202611/09/JWs6LjMQYreoiyIbvwo5/image.jpg",
       tag: "Travel"
     },
     {
       title: "Wanderlust With You 🌿💚",
       caption: "Jahan bhi jayein, jab tak aap mere saath hain, har jagah jannat jaisi lagti hai!",
       date: "Green Getaway",
-      src: "assets/images/travel_moment2.jpg",
+      src: "https://plain-apac-prod-public.komododecks.com/202611/09/tkgf9Dz7QrgC5IV6dKzW/image.jpg",
       tag: "Travel"
     },
     {
       title: "Always You & Me ❤️",
       caption: "Chaar deewaron ko ghar aapki smile aur aapka saath banata hai. Meri sabse pyaari Udbilao!",
       date: "Everyday Love",
-      src: "assets/images/us_moment.jpg",
+      src: "https://plain-apac-prod-public.komododecks.com/202611/09/6l0rggqzeYZGVLmaH1MU/image.jpg",
       tag: "Us"
     }
   ],

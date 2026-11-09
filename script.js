@@ -7,7 +7,7 @@
 
   // 1. DATA STATE & LOCAL STORAGE MERGING
   let appData = null;
-  const STORAGE_KEY = 'ANTIGRAVITY_LOVE_DATA_V13';
+  const STORAGE_KEY = 'ANTIGRAVITY_LOVE_DATA_V16';
   const PHOTOS_STORAGE_KEY = 'ANTIGRAVITY_LOVE_PHOTOS_V1';
 
   function initData() {
