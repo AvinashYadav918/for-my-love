@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Forever Love ❤️</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Hearts Background Canvas -->
+  <canvas id="hearts-canvas"></canvas>
+
+  <!-- Ambient Audio Player Element -->
+  <audio id="romantic-audio" loop preload="auto">
+    <source id="audio-source" src="" type="audio/mpeg">
+  </audio>
+
+
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-container">
+      <div class="monogram-badge">
+        <span class="sparkle-star">✨</span>
+        <span id="couple-monogram">A & N</span>
+        <span class="sparkle-star">✨</span>
+      </div>
+
+      <p class="hero-tagline" id="hero-tagline">To my cutest Udbilao &amp; the queen of my heart ❤️</p>
+      
+      <h1 class="hero-heading" id="hero-heading">
+        Every Love Story Is Beautiful,<br>
+        <span class="gradient-text">But Ours Is My Favorite</span>
+      </h1>
+      
+      <p class="hero-subtext" id="hero-subtext">
+        Yeh ek chhota sa digital jahaan hai, jo sirf aur sirf meri pyaari Udbilao ke liye banaya gaya hai. 
+        Because you deserve the world and all the stars in it! ✨
+      </p>
+
+      <!-- Live Days & Time Together Counter -->
+      <div class="counter-card">
+        <div class="counter-badge">OUR WEDDING CLOCK 💍 18 APRIL 2025</div>
+        <h3 class="counter-title">Counting Every Second Since The Best Day Of My Life</h3>
+        <div class="counter-grid" id="timer-grid">
+          <div class="time-block">
+            <span class="time-number" id="count-years">0</span>
+            <span class="time-label">Years</span>
+          </div>
+          <div class="time-divider">❤️</div>
+          <div class="time-block">
+            <span class="time-number" id="count-days">0</span>
+            <span class="time-label">Days</span>
+          </div>
+          <div class="time-divider">❤️</div>
+          <div class="time-block">
+            <span class="time-number" id="count-hours">00</span>
+            <span class="time-label">Hours</span>
+          </div>
+          <div class="time-divider">❤️</div>
+          <div class="time-block">
+            <span class="time-number" id="count-minutes">00</span>
+            <span class="time-label">Minutes</span>
+          </div>
+          <div class="time-divider">❤️</div>
+          <div class="time-block">
+            <span class="time-number" id="count-seconds">00</span>
+            <span class="time-label">Seconds</span>
+          </div>
+        </div>
+        <p class="counter-footer">...and falling in love with you more each day, meri pyaari Udbilao! ❤️</p>
+      </div>
+
+      <!-- Quick Nav Buttons -->
+      <nav class="quick-nav">
+        <a href="#letter-section" class="nav-pill">💌 Secret Letter</a>
+        <a href="#favorites-section" class="nav-pill">🌸 All About Her</a>
+        <a href="#gallery-section" class="nav-pill">📸 Memory Lane</a>
+        <a href="#timeline-section" class="nav-pill">📖 Our Journey</a>
+        <a href="#love-jar-section" class="nav-pill">✨ Love Jar</a>
+        <a href="#question-section" class="nav-pill special">💖 A Question</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section 1: Heartfelt Sealed Love Letter (Interactive Envelope) -->
+  <section id="letter-section" class="section-container">
+    <div class="section-header">
+      <span class="section-tag">OPEN WITH LOVE</span>
+      <h2 class="section-title">A Letter From My Heart</h2>
+      <p class="section-subtitle">Click on the envelope to unfold the secret love note sealed just for you.</p>
+    </div>
+
+    <div class="envelope-wrapper">
+      <div class="envelope-box" id="envelope-trigger">
+        <div class="envelope-back"></div>
+        <div class="letter-paper" id="letter-paper">
+          <div class="letter-inner">
+            <div class="letter-stamp">❤️</div>
+            <p class="letter-date" id="letter-date">Forever &amp; Always</p>
+            <h3 class="letter-salutation" id="letter-salutation">Meri Pyaari Udbilao,</h3>
+            <div class="letter-body" id="letter-body">
+              <!-- Rendered dynamically from config -->
+            </div>
+            <p class="letter-closing" id="letter-closing">With all my love &amp; heart,</p>
+            <p class="letter-signature" id="letter-signature">Yours Always, Avinash ❤️</p>
+          </div>
+        </div>
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal" id="envelope-seal">
+          <span>❤️</span>
+          <p class="seal-hint">Click To Open</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: All About Her (Favorites, Superpowers & Quirks) -->
+  <section id="favorites-section" class="section-container">
+    <div class="section-header">
+      <span class="section-tag">MY FAVORITE PERSON</span>
+      <h2 class="section-title">Everything I Adore About You</h2>
+      <p class="section-subtitle">Aapki pasand, aapki aadatain, aur wo saari choti choti baatein jo aapko sabse special banati hain.</p>
+    </div>
+
+    <div class="favorites-categories" id="favorites-container">
+      <!-- Injected from config.js -->
+    </div>
+  </section>
+
+  <!-- Section 3: Memory Lane (Polaroid Photo Wall & Lightbox) -->
+  <section id="gallery-section" class="section-container">
+    <div class="section-header">
+      <span class="section-tag">OUR MOMENTS</span>
+      <h2 class="section-title">Memory Lane &amp; Polaroids</h2>
+      <p class="section-subtitle">Har ek photo ek khoobsurat kahani bayan karti hai. Hover to view &amp; click to expand!</p>
+      
+      <!-- In-browser Photo Add Bar -->
+      <div class="gallery-actions">
+        <button id="add-photo-btn" class="action-btn">
+          <span>📸</span> Add Our New Photo
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter Pills -->
+    <div class="filter-bar" id="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <!-- Additional tags rendered by script -->
+    </div>
+
+    <!-- Polaroid Grid -->
+    <div class="polaroid-grid" id="polaroid-grid">
+      <!-- Rendered dynamically -->
+    </div>
+  </section>
+
+  <!-- Section 4: Our Love Journey (Timeline) -->
+  <section id="timeline-section" class="section-container">
+    <div class="section-header">
+      <span class="section-tag">OUR LOVE STORY</span>
+      <h2 class="section-title">Chapters of Our Journey</h2>
+      <p class="section-subtitle">Wo pehla din se lekar aaj tak, har pal aapke saath ek khubsoorat safar hai.</p>
+    </div>
+
+    <div class="timeline-wrapper" id="timeline-wrapper">
+      <!-- Rendered dynamically from config.js -->
+    </div>
+  </section>
+
+  <!-- Section 5: The Love Jar (Interactive Reasons Why I Love You) -->
+  <section id="love-jar-section" class="section-container">
+    <div class="section-header">
+      <span class="section-tag">VIRTUAL LOVE JAR</span>
+      <h2 class="section-title">Reasons Why I Love You</h2>
+      <p class="section-subtitle">Click the golden jar to pull out a heartfelt reason why you are my world!</p>
+    </div>
+
+    <div class="love-jar-container">
+      <div class="jar-visual" id="jar-clickable" title="Click to draw a love note!">
+        <div class="jar-lid"></div>
+        <div class="jar-neck"></div>
+        <div class="jar-body">
+          <div class="floating-hearts-jar">
+            <span class="mini-heart h1">💖</span>
+            <span class="mini-heart h2">💝</span>
+            <span class="mini-heart h3">💕</span>
+            <span class="mini-heart h4">❤️</span>
+            <span class="mini-heart h5">✨</span>
+          </div>
+          <div class="jar-label">
+            <span>Our Love Jar</span>
+            <small>Tap Me! 👆</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Love Note Card -->
+      <div class="love-note-card" id="love-note-card">
+        <div class="note-pin">📌</div>
+        <span class="note-counter" id="note-counter">Reason #1 of 20</span>
+        <blockquote class="note-text" id="note-text">
+          "Aap jab hasti hain toh aapki aankhein chhoti ho jati hain, aur wo sabse cute lagta hai."
+        </blockquote>
+        <button id="next-reason-btn" class="pill-button">
+          <span>✨ Give Me Another Reason!</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: The Ultimate Romantic Question / Proposal -->
+  <section id="question-section" class="section-container question-container">
+    <div class="question-box">
+      <div class="question-heart-pulse">💍</div>
+      <span class="section-tag">A VERY SPECIAL QUESTION</span>
+      <h2 class="question-heading" id="proposal-question">
+        Will You Be My Forever Valentine &amp; My Queen?
+      </h2>
+      <p class="question-sub" id="proposal-sub">
+        (Disclaimer: 'No' button dabane ki koshish bekaar hai meri pyaari Udbilao! 😜)
+      </p>
+
+      <div class="button-arena" id="button-arena">
+        <button id="yes-button" class="btn-primary-glow">
+          <span id="yes-button-text">YES! 1000 Times YES! 💖</span>
+        </button>
+        <button id="no-button" class="btn-secondary-dodge">
+          <span id="no-button-text">No (Can't Click Me) 🙈</span>
+        </button>
+      </div>
+
+      <!-- Success Popup / Reveal Card (Hidden until Yes is clicked) -->
+      <div class="success-card hidden" id="success-card">
+        <div class="success-icon">🎉❤️🥂</div>
+        <h3 class="success-title" id="success-heading">YAAAYYY! Aapne YES bola! 🎉🥰</h3>
+        <p class="success-body" id="success-message">
+          I love you so much meri pyaari Udbilao! You just made my entire lifetime! Get ready for lots of hugs, cuddles, and your favorite food! ❤️✨
+        </p>
+        <div class="celebrate-badges">
+          <span>💑 Best Couple Ever</span>
+          <span>♾️ Forever &amp; Beyond</span>
+          <span>👑 Queen of My Heart</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-heart">❤️</div>
+    <p class="footer-text">
+      Handcrafted with pure love by <strong id="footer-husband">Avinash</strong> for his beloved <strong id="footer-wife">Udbilao</strong>.
+    </p>
+    <p class="footer-sub">No matter what happens, you will always be my happiest home. ✨</p>
+  </footer>
+
+  <!-- Lightbox Modal for Photo Gallery -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img id="lightbox-img" src="" alt="Couple Photo">
+      <div class="lightbox-caption">
+        <h4 id="lightbox-title">Title</h4>
+        <p id="lightbox-desc">Caption</p>
+        <span class="lightbox-date" id="lightbox-date">Date</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Photo Modal -->
+  <div class="lightbox-modal" id="add-photo-modal">
+    <div class="lightbox-backdrop" id="add-photo-backdrop"></div>
+    <div class="modal-card">
+      <button class="lightbox-close" id="add-photo-close">&times;</button>
+      <h3>📸 Add A New Memory</h3>
+      <p class="modal-sub">Apni photo select karein ya paste karein, aur pyara sa caption likhein!</p>
+      
+      <form id="add-photo-form">
+        <div class="form-group">
+          <label>Select Photo (From Phone / PC):</label>
+          <input type="file" id="new-photo-file" accept="image/*" class="form-input">
+        </div>
+        <div class="form-divider">- OR -</div>
+        <div class="form-group">
+          <label>Photo URL / File Name (e.g. assets/images/myphoto.jpg):</label>
+          <input type="text" id="new-photo-url" placeholder="assets/images/myphoto.jpg" class="form-input">
+        </div>
+        <div class="form-group">
+          <label>Photo Title / Moment:</label>
+          <input type="text" id="new-photo-title" placeholder="e.g. Our Goa Trip / Dinner Date" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label>Romantic Caption:</label>
+          <input type="text" id="new-photo-caption" placeholder="e.g. The way you smiled here melted my heart ❤️" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label>Category Tag:</label>
+          <select id="new-photo-tag" class="form-input">
+            <option value="Romantic">Romantic</option>
+            <option value="Travel">Travel &amp; Outings</option>
+            <option value="Fun">Goofy &amp; Fun</option>
+            <option value="Special">Special Dates</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary-glow full-width">Add To Memory Wall 💖</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Quick Edit Modal -->
+  <div class="lightbox-modal" id="edit-modal">
+    <div class="lightbox-backdrop" id="edit-backdrop"></div>
+    <div class="modal-card">
+      <button class="lightbox-close" id="edit-close">&times;</button>
+      <h3>⚙️ Quick Personalize Details</h3>
+      <p class="modal-sub">Yahan se aap apne aur wife ke naam aur date turant change kar sakte hain!</p>
+      
+      <form id="edit-details-form">
+        <div class="form-group">
+          <label>Aapka Naam (Husband):</label>
+          <input type="text" id="edit-husband-name" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label>Wife Ka Naam:</label>
+          <input type="text" id="edit-wife-name" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label>Wife Ka Nickname (e.g. Jaan / Golu):</label>
+          <input type="text" id="edit-wife-nickname" class="form-input">
+        </div>
+        <div class="form-group">
+          <label>Anniversary / Special Date:</label>
+          <input type="datetime-local" id="edit-anniversary-date" class="form-input">
+        </div>
+        <div class="form-group">
+          <label>Custom Song URL (MP3 Link or local path):</label>
+          <input type="text" id="edit-song-url" class="form-input" placeholder="assets/audio/song.mp3">
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary-glow">Save Changes ✨</button>
+          <button type="button" id="reset-config-btn" class="btn-secondary-dodge">Reset to Default</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fullscreen Romantic Love Letter Modal -->
+  <div class="fullscreen-letter-modal" id="fullscreen-letter-modal">
+    <div class="letter-modal-backdrop" id="letter-modal-backdrop"></div>
+    <button class="fullscreen-close-btn" id="letter-modal-close" title="Close Letter">✕</button>
+    <div class="fullscreen-letter-paper" id="fullscreen-letter-paper">
+      <div class="letter-inner">
+        <div class="letter-stamp">❤️</div>
+        <p class="letter-date" id="fullscreen-letter-date">Forever &amp; Always</p>
+        <h3 class="letter-salutation" id="fullscreen-letter-salutation">Meri Pyaari Udbilao,</h3>
+        <div class="letter-body" id="fullscreen-letter-body">
+          <!-- Rendered dynamically from config -->
+        </div>
+        <p class="letter-closing" id="fullscreen-letter-closing">With all my love &amp; heart,</p>
+        <p class="letter-signature" id="fullscreen-letter-signature">Yours Always, Avinash ❤️</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
